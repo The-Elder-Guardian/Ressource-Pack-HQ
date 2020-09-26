@@ -14,8 +14,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        with:
-          path: 'ressource'
+        
 
       - name: Compresser le pack en un zip
         run: zip -r pack.zip *
