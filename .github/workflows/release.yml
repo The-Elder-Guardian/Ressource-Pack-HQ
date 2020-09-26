@@ -17,13 +17,16 @@ jobs:
         with:
           path: 'ressource'
 
-      - uses: montudor/action-zip@v0.1.0
-        with:
-          args: zip -qq -r pack.zip ressource
+      - name: Compresser le pack en un zip
+        run: zip -r votre_archive.zip *
           
-      - name: Get short SHA
+      - name: Obtenir le SHA1 du commit
         id: slug
         run: echo "::set-output name=sha8::$(echo ${GITHUB_SHA} | cut -c1-8)"
+        
+      - name: Obtenir le SHA1 du zip
+        id: shazip
+        run: echo "::set-output name=shazip::$(sha1sum pack.zip)"
 
           
       - name: Create Release
@@ -34,6 +37,7 @@ jobs:
         with:
           tag_name: ${{ steps.slug.outputs.sha8 }}
           release_name: Release ${{ steps.slug.outputs.sha8 }}
+          body: ${{ steps.shazip.outputs.shazip }}
           draft: false
           prerelease: false
           
