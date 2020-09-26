@@ -18,7 +18,7 @@ jobs:
           path: 'ressource'
 
       - name: Compresser le pack en un zip
-        run: zip -r votre_archive.zip *
+        run: zip -r pack.zip *
           
       - name: Obtenir le SHA1 du commit
         id: slug
