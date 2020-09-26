@@ -2,4 +2,4 @@
 dc6d6c436578d545b72f218111c07f500b13e39b
 
 La ligne 1 doit être les 8 premiers caractères du SHA1 du commit de release (autrement dit les 8 caractères du titre de la release)
-La ligne 2 doit être le SHA1 complet du fichier pack.zip
+La ligne 2 doit être le SHA1 complet du fichier pack.zip (indiqué dans la description de la release)
