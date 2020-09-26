@@ -1,9 +1,9 @@
 {
 	"teg.music.cinematicorchestral":{
-		"subtitle": "Musique d'ambience épique"
-		"sounds:[
+		"subtitle": "Musique d'ambience épique",
+		"sounds":[
 			{
-				"tegambient/cinematicorchestral
+				"name":"tegambient/cinematicorchestral",
 				"streaming": true
 			}
 		]
